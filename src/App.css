@@ -1,0 +1,70 @@
+/* Styles pour l'application de blog */
+
+/* Transitions douces pour les changements de thème */
+body, 
+.card, 
+.btn, 
+.form-control, 
+.badge {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hauteur minimale pour assurer une mise en page cohérente */
+.container {
+  min-height: 100vh;
+}
+
+/* Styles pour les cartes de posts */
+.card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styles pour les badges de tags */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+  transition: background-color 0.2s ease;
+}
+
+.badge:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* Curseur personnalisé pour les éléments cliquables */
+.post-list .card,
+.badge[onClick] {
+  cursor: pointer;
+}
+
+/* Styles pour les vignettes de posts */
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: inherit;
+  opacity: 0.8;
+}
+
+/* Exercice 3 - Styles specifiques au mode sombre */
+body[data-bs-theme="dark"] {
+  background-color: #1a1d21;
+  color: #e9ecef;
+}
+
+body[data-bs-theme="dark"] .card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+body[data-bs-theme="dark"] .border-bottom,
+body[data-bs-theme="dark"] .border-top {
+  border-color: #343a40 !important;
+}
